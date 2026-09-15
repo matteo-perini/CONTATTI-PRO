@@ -12,14 +12,36 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         
-        <!-- Regole CSS: bianco più acceso, leggermente più spesse e senza zoom esagerato -->
+        <!-- Regole CSS: icone luminose, adattamento mobile e posizione sfondo -->
         <style>
             #header nav ul li a.icon {
-                color: #ffffff !important;   /* Bianco puro e acceso */
-                font-weight: bold !important;/* Effetto in grassetto */
-                -webkit-font-smoothing: antialiased; /* Rende il tratto più definito */
-                text-shadow: 0 1px 4px rgba(0,0,0,0.9); /* Leggera ombra per staccarle dallo sfondo */
-                opacity: 1 !important;       /* Massima visibilità */
+                color: #ffffff !important;   /* Bianco puro */
+                font-weight: bold !important;
+                font-size: 1.25rem !important; /* Icone leggermente più grandi */
+                -webkit-font-smoothing: antialiased;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                             0 0 20px rgba(255, 255, 255, 0.4), 
+                             0 2px 6px rgba(0, 0, 0, 0.9) !important;
+                opacity: 1 !important;
+                transition: transform 0.2s ease;
+            }
+            #header nav ul li a.icon:hover {
+                transform: scale(1.15);
+            }
+
+            /* SPPOSTA L'IMMAGINE DI SFONDO PIÙ IN ALTO (o regola le montagne) */
+            #bg {
+                background-position: center bottom !important; /* Sposta l'inquadratura verso il basso dell'immagine per far salire le montagne */
+            }
+
+            /* CORRETTORE PER CELLULARE: riduce leggermente i cerchi e le icone su mobile così stanno tutte in armonia */
+            @media screen and (max-width: 736px) {
+                #header nav ul li a.icon {
+                    width: 4.5rem !important;
+                    height: 4.5rem !important;
+                    line-height: 4.5rem !important;
+                    font-size: 1.1rem !important;
+                }
             }
         </style>
     </head>
@@ -39,6 +61,7 @@
                                 <li><a href="https://www.facebook.com/share/19aFnDShs8/" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
                                 <li><a href="https://www.tiktok.com/@ricciiuzz?_r=1&_t=ZG-99juQmR9MvJ" class="icon brands fa-tiktok" target="_blank"><span class="label">TikTok</span></a></li>
                                 <li><a href="https://wa.me/393277179868" class="icon brands fa-whatsapp" target="_blank"><span class="label">WhatsApp</span></a></li>
+                                <li><a href="https://www.ricciowebdesign.it" class="icon solid fa-globe" target="_blank"><span class="label">Website</span></a></li>
                                 <li><a href="mailto:matteoperini94@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
                             </ul>
                         </nav>
@@ -46,7 +69,7 @@
 
                 <!-- Footer -->
                     <footer id="footer">
-                        <span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+                        <span class="copyright">Design by <a href="https://www.ricciowebdesign.it" target="_blank">Ricciowebdesign</a></span>
                     </footer>
 
             </div>
